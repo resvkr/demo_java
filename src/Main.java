@@ -45,26 +45,21 @@ public class Main {
 
     static void showCircle(int num) {
         for (int i = 1; i <= num; i++) {
-            for (int j = 0; j < num - i; j++) {
-                System.out.print("  ");
-            }
-            for (int j = 0; j < i * 2; j++) {
-                System.out.print("+ ");
-
-            }
-            System.out.println();
-
+            printSymbols(num, i);
         }
         for (int i = num; i >= 1; i--) {
-            for (int j = 0; j < num - i; j++) {
-                System.out.print("  ");
-            }
-            for (int j = 0; j < i * 2; j++) {
-                System.out.print("+ ");
-
-            }
-            System.out.println();
+            printSymbols(num, i);
         }
 
+    }
+
+    private static void printSymbols(int num, int i) {
+        for (int j = 0; j < num - i; j++) {
+            System.out.print("  ");
+        }
+        for (int j = 0; j < i * 2; j++) {
+            System.out.print("+ ");
+        }
+        System.out.println();
     }
 }
