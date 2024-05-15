@@ -1,33 +1,10 @@
 public class Main {
-    // input num 3
-    //  * * *
-    //  * * *
-    //  * * *
+    public static void main(String[] args) {
+        showMultiplicationTable(10);
+        showSquareTable(10);
+        showCircle(5);
 
-
-    /**
-     * input 5
-     *  *
-     *  * *
-     *  * * *
-     *  * * * *
-     *  * * * * *
-     */
-
-    /**
-     * input 3
-     *      *
-     *    * *
-     *  * * *
-     */
-
-    /**
-     * input 3
-     * *
-     * * * *
-     * * * * * *
-     */
-
+    }
 
     static void showArray(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -36,23 +13,6 @@ public class Main {
             }
             System.out.println();
         }
-    }
-
-    /**
-     * input 3
-     * *
-     * * * *
-     * * * * * *
-     * *
-     */
-// таблиця множення+
-// таблиця квардратів
-    // draw a circle using just * not in array
-    public static void main(String[] args) {
-        showMultiplicationTable(10);
-        showSquareTable(10);
-        showCircle(5);
-
     }
 
     static void showMultiplicationTable(int num) {
