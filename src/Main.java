@@ -23,10 +23,20 @@ public class Main {
 
     /**
      * input 3
-     *      *
-     *    * * *
-     *  * * * * *
+     * *
+     * * * *
+     * * * * * *
      */
+
+
+    static void showArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
 
     /**
      * input 3
@@ -39,7 +49,13 @@ public class Main {
 // таблиця квардратів
     // draw a circle using just * not in array
     public static void main(String[] args) {
-        int num = 4;
+        showMultiplicationTable(10);
+        showSquareTable(10);
+        showCircle(5);
+
+    }
+
+    static void showMultiplicationTable(int num) {
         int[][] numsArr = new int[num][num];
 
         for (int i = 0; i < numsArr.length; i++) {
@@ -52,6 +68,10 @@ public class Main {
         showArray(numsArr);
         System.out.println();
 
+    }
+
+    static void showSquareTable(int num) {
+        int[][] numsArr = new int[num][num];
         for (int i = 0; i < numsArr.length; i++) {
 
             for (int j = 0; j < numsArr.length; j++) {
@@ -61,8 +81,9 @@ public class Main {
         }
 
         showArray(numsArr);
-        int counter = num - 1;
+    }
 
+    static void showCircle(int num) {
         for (int i = 1; i <= num; i++) {
             for (int j = 0; j < num - i; j++) {
                 System.out.print("  ");
@@ -83,19 +104,7 @@ public class Main {
 
             }
             System.out.println();
-
         }
 
-
-    }
-
-
-    static void showArray(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                System.out.print(arr[i][j] + "  ");
-            }
-            System.out.println();
-        }
     }
 }
