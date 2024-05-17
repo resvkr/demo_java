@@ -1,24 +1,21 @@
 package lesson2.Homework;
 
-
-/**
- * TODO:
- *  - learn about ArrayList: https://www.w3schools.com/java/java_arraylist.asp
- *  - Products Shop:
- *      - class Shop
- *          - product(quantities): apples, peaches, bananas
- *          - showAllProducts
- *      - class Customer
- *          - product(quantities): apples, peaches, bananas
- *          - methods
- *              - showChosenProducts
- *              - get product (shop - (num product))
- *              - return product (shop + (num product))
- *              Please take a look at exceptions when products are not available
- *      task:
- *          - play with arraylist (not too much)
- *          - Please implement all methods and use it for two Customers
- */
-
 public class Main {
+    public static void main(String[] args) {
+        Shop metro = new Shop(10, 5, 2);
+
+        System.out.println(metro.showAllProducts());
+        System.out.println();
+
+        Customer customer1 = new Customer(metro);
+        customer1.addApplesCust(6);
+        customer1.addApplesCust(3);
+        customer1.addPeachesCust(3);
+        customer1.addBananasCust(1);
+        customer1.confirmOrder();
+        System.out.println(customer1.showChosenProducts());
+        System.out.println(metro.showAllProducts());
+
+
+    }
 }
