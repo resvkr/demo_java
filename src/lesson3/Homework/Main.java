@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         AbstractList<String> notebook = new ArrayList<>();
+
         String whatToDo = "";
         while (!whatToDo.equals("stop")) {
             whatToDo = action();
