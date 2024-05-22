@@ -16,29 +16,34 @@ public class Main {
         String whatToDo = "";
         while (!whatToDo.equals("stop")) {
             whatToDo = action();
-            if (whatToDo.equals("add")) {
-                System.out.println("Write note:");
-                Scanner scanner = new Scanner(System.in);
-                String note = scanner.nextLine();
-                addNote(notebook, note);
-            } else if (whatToDo.equals("remove")) {
-                System.out.println("Write number of note you want to remove");
-                Scanner scanner = new Scanner(System.in);
-                int num = scanner.nextInt();
-                removeNote(notebook, num);
-            } else if (whatToDo.equals("show")) {
-                showNotes(notebook);
+            switch (whatToDo) {
+                case "add" -> {
+                    System.out.println("Write note:");
+                    Scanner scanner = new Scanner(System.in);
+                    String note = scanner.nextLine();
+                    addNote(notebook, note);
+                }
+                case "remove" -> {
+                    showNotes(notebook);
+                    System.out.println("Write number of note you want to remove");
+                    Scanner scanner = new Scanner(System.in);
+                    int num = scanner.nextInt();
+                    removeNote(notebook, num);
+                }
+                case "show" -> showNotes(notebook);
             }
         }
-
-
     }
 
     static String action() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What do you want to do?");
-        String action = scanner.nextLine();
-        return action;
+        System.out.println("""
+                choices:
+                add
+                remove
+                show
+                What do you want to do?""");
+        return scanner.nextLine();
     }
 
     static void addNote(AbstractList<String> list, String note) {
@@ -52,6 +57,8 @@ public class Main {
     }
 
     static void showNotes(AbstractList<String> list) {
-        System.out.println(list);
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println((i + 1) + ") " + list.get(i));
+        }
     }
 }
