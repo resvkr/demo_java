@@ -9,8 +9,6 @@ package lesson3.Homework;
 public class Main {
     public static void main(String[] args) {
         Notes notebook = new Notes();
-        notebook.addNote("blabla");
-        notebook.addNote("blabla");
         NotesWorker notesWorker = new NotesWorker(notebook);
         notesWorker.start();
     }

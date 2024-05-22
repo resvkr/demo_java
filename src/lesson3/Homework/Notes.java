@@ -1,12 +1,11 @@
 package lesson3.Homework;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 
 public class Notes {
-    AbstractList<String> notebook = new ArrayList<>();
+    ArrayList<Note> notebook = new ArrayList<>();
 
-    void addNote(String note) {
+    void addNote(Note note) {
         notebook.add(note);
         System.out.println("Note added");
     }
@@ -19,7 +18,15 @@ public class Notes {
 
     void showNotes() {
         for (int i = 0; i < notebook.size(); i++) {
-            System.out.println((i + 1) + ") " + notebook.get(i));
+            System.out.println((i + 1) + ") " + notebook.get(i).getTitle());
         }
+    }
+
+    void modifyNote(int num, Note note){
+        notebook.set(num-1,note);
+    }
+
+    Note getNoteByIndex(int num){
+        return notebook.get(num-1);
     }
 }
