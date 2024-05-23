@@ -4,7 +4,6 @@ package lesson4;
 //  - extend
 //  keywords:
 //  - private
-
 // play with these words and show some examples
 public class Main {
     public static void main(String[] args) {

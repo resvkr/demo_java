@@ -1,5 +1,6 @@
 package lesson4;
 
+
 public class Сapricciosa extends BasicPizza {
     String mushrooms;
     String artichokes;

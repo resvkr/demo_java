@@ -1,5 +1,6 @@
 package lesson4;
 
+
 public class Margherita extends BasicPizza {
     String tomatoes;
     String basil;
