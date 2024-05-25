@@ -1,25 +1,16 @@
 package lesson4;
 
 
-public class BasicPizza {
-    String dough;
-    String sauce;
-    String meat;
-    String cheese;
+public class BasicPizza implements Pizza {
+    private final boolean dough = true;
 
-    public BasicPizza(String dough, String sauce, String meat, String cheese) {
-        this.dough = dough;
-        this.sauce = sauce;
-        this.meat = meat;
-        this.cheese = cheese;
+    public boolean containsDough() {
+        return dough;
     }
 
-    public String toString() {
-        String result = "";
-        result += "\n" + dough;
-        result += "\n" + sauce;
-        result += "\n" + meat;
-        result += "\n" + cheese;
-        return result;
+    @Override
+    public void bake() {
+        System.out.println("Pizza is baked" + dough);
     }
+
 }
