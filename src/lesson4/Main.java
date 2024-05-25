@@ -1,19 +1,16 @@
 package lesson4;
 
+// learn about words:
+//  - extend
+//  keywords:
+//  - private
+// play with these words and show some examples
 public class Main {
     public static void main(String[] args) {
-        Margherita margherita1 = new Margherita(true);
-        Margherita margherita2 = new Margherita(false);
-        Сapricciosa capricciosa1 = new Сapricciosa(true);
-        Сapricciosa capricciosa2 = new Сapricciosa(false);
-
-        Customer order = new Customer();
-
-        order.makeOrder(margherita1);
-        order.makeOrder(margherita2);
-        order.makeOrder(capricciosa1);
-        order.makeOrder(capricciosa2);
-
-        order.confirmOrder();
+        BasicPizza pizza = new BasicPizza("dough", "sauce", "meat", "cheese");
+        Margherita margherita = new Margherita("dough", "sauce", "meat", "cheese", "tomatoes", "basil");
+        System.out.println(margherita.ingredients());
+        Сapricciosa сapricciosa = new Сapricciosa("dough", "sauce", "meat", "cheese", "mushrooms", "artichokes");
+        System.out.println(сapricciosa.ingredients());
     }
 }
