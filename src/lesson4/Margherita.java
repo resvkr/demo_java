@@ -2,21 +2,20 @@ package lesson4;
 
 
 public class Margherita extends BasicPizza {
-    String tomatoes;
-    String basil;
 
+    private final boolean tomatoes = true;
+    private boolean basil;
 
-    public Margherita(String dough, String sauce, String meat, String cheese, String tomatoes, String basil) {
-        super(dough, sauce, meat, cheese);
-        this.tomatoes = tomatoes;
+    public Margherita(boolean basil) {
         this.basil = basil;
     }
 
-    public String ingredients() {
-        String result = "Margherita is pizza with: ";
-        result += toString();
-        result += "\n" + tomatoes;
-        result += "\n" + basil;
-        return result;
+    @Override
+    public String toString() {
+        return "Margherita{" +
+                "dough=" + containsDough() +
+                ", tomatoes=" + tomatoes +
+                ", basil=" + basil +
+                '}';
     }
 }
