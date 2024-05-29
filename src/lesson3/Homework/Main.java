@@ -1,5 +1,8 @@
 package lesson3.Homework;
 
+import lesson3.Homework.service.Notes;
+import lesson3.Homework.service.NotesWorker;
+
 // play with ArrayList<String..>
 // add notes to list:
 // - ask user to add note
