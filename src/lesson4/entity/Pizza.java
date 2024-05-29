@@ -1,4 +1,4 @@
-package lesson4;
+package lesson4.entity;
 
 public interface Pizza {
     void bake();
