@@ -1,5 +1,11 @@
 package lesson4;
 
+import lesson4.entity.Pizza;
+import lesson4.entity.impl.BasicPizza;
+import lesson4.entity.impl.Capricciosa;
+import lesson4.entity.impl.Margherita;
+import lesson4.services.OrderService;
+
 public class Main {
 
     // please try to use OOP as: Interface nameOfObject = new Implementation()
@@ -11,7 +17,7 @@ public class Main {
         Pizza capricciosa2 = new Capricciosa(false);
 
 
-        Customer order = new Customer();
+        OrderService order = new OrderService();
 
         order.makeOrder(margherita1);
         order.makeOrder(margherita2);
