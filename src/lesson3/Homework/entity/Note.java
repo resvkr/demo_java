@@ -1,8 +1,8 @@
-package lesson3.Homework;
+package lesson3.Homework.entity;
 
 public class Note {
-    String title;
-    String description;
+    private final String title;
+    private final String description;
 
     public Note(String title, String description) {
         this.title = title;
