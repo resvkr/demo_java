@@ -1,18 +1,20 @@
-package lesson4;
+package lesson4.services;
+
+import lesson4.entity.Pizza;
 
 import java.util.ArrayList;
 
 // could you use some keywords to make this class more secured?
-public class Customer {
+public class OrderService {
     private final ArrayList<Pizza> order = new ArrayList<>();
 
-    void makeOrder(Pizza pizza) {
+    public void makeOrder(Pizza pizza) {
         order.add(pizza);
     }
 
 
     // why not to use some method we have to show that what will be baked?
-    void confirmOrder() {
+    public void confirmOrder() {
         for (Pizza pizza : order) {
             pizza.bake();
         }
