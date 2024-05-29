@@ -1,15 +1,17 @@
-package lesson3.Homework;
+package lesson3.Homework.service;
+
+import lesson3.Homework.entity.Note;
 
 import java.util.Scanner;
 
 public class NotesWorker {
-    Notes notes;
+    private final Notes notes;
 
     public NotesWorker(Notes notes) {
         this.notes = notes;
     }
 
-    void start() {
+    public void start() {
         boolean whatToDo = true;
         while (whatToDo) {
             switch (actions()) {
@@ -24,7 +26,7 @@ public class NotesWorker {
         }
     }
 
-    String actions() {
+    private String actions() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 choices:
@@ -37,11 +39,11 @@ public class NotesWorker {
         return scanner.nextLine();
     }
 
-    void addOption() {
+    private void addOption() {
         notes.addNote(getNoteFromUser());
     }
 
-    void removeOption() {
+    private void removeOption() {
         notes.showNotes();
         System.out.println("Write number of note you want to remove");
         Scanner scanner = new Scanner(System.in);
@@ -49,7 +51,7 @@ public class NotesWorker {
         notes.removeNote(num);
     }
 
-    void modifyOption() {
+    private void modifyOption() {
         Scanner scanner = new Scanner(System.in);
         notes.showNotes();
 
@@ -59,7 +61,7 @@ public class NotesWorker {
         notes.modifyNote(num, getNoteFromUser());
     }
 
-    Note getNoteFromUser() {
+    private Note getNoteFromUser() {
         System.out.println("Write title:");
         Scanner textscanner = new Scanner(System.in);
         String title = textscanner.nextLine();
@@ -68,7 +70,7 @@ public class NotesWorker {
         return new Note(title, description);
     }
 
-    void getNote(){
+    private void getNote() {
         System.out.println("Write number of note you watn to get:");
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
