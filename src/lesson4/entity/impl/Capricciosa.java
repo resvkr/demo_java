@@ -1,11 +1,11 @@
-package lesson4;
+package lesson4.entity.impl;
 
 
 public class Capricciosa extends BasicPizza {
 
 
     private final boolean mushrooms = true;
-    private boolean ham;
+    private final boolean ham;
 
     public Capricciosa(boolean ham) {
         this.ham = ham;

@@ -1,4 +1,4 @@
-package lesson4;
+package lesson4.entity.impl;
 
 
 public class Margherita extends BasicPizza {

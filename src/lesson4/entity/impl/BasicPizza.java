@@ -1,5 +1,7 @@
-package lesson4;
+package lesson4.entity.impl;
 
+
+import lesson4.entity.Pizza;
 
 public class BasicPizza implements Pizza {
     private final boolean dough = true;
