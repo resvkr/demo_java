@@ -8,10 +8,16 @@ public class BasicPizza implements Pizza {
         return dough;
     }
 
-    // this method should  show which pizza will be baked and with what ingredients
     @Override
     public void bake() {
-        System.out.println("Pizza is baked" + dough);
+        System.out.println("Pizza is baked " + this);
     }
 
+    @Override
+    public String toString() {
+        return "BasicPizza{" +
+                "dough=" + this.dough +
+                '}';
+    }
 }
+

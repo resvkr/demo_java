@@ -1,12 +1,13 @@
 package lesson4;
 
 
-public class Сapricciosa extends BasicPizza {
+public class Capricciosa extends BasicPizza {
+
 
     private final boolean mushrooms = true;
     private boolean ham;
 
-    public Сapricciosa(boolean ham) {
+    public Capricciosa(boolean ham) {
         this.ham = ham;
     }
 
