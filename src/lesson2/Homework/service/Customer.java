@@ -1,4 +1,6 @@
-package lesson2.Homework;
+package lesson2.Homework.service;
+
+import lesson2.Homework.entity.Shop;
 
 public class Customer {
     int applesCust;
@@ -6,7 +8,7 @@ public class Customer {
     int bananasCust;
     Shop shop;
 
-    Customer(Shop shop) {
+    public Customer(Shop shop) {
         this.shop = shop;
     }
 
@@ -15,7 +17,7 @@ public class Customer {
         if (temp < shop.getBananas()) {
             this.bananasCust += bananasCust;
         } else {
-            System.out.println("Shop: " + shop.bananas + "< Customer order: " + temp);
+            System.out.println("Shop: " + shop.getBananas() + "< Customer order: " + temp);
         }
     }
 
@@ -24,7 +26,7 @@ public class Customer {
         if (temp < shop.getPeaches()) {
             this.peachesCust += peachesCust;
         } else {
-            System.out.println("Shop: " + shop.peaches + "< Customer order: " + temp);
+            System.out.println("Shop: " + shop.getPeaches() + "< Customer order: " + temp);
         }
     }
 
@@ -33,11 +35,11 @@ public class Customer {
         if (temp < shop.getApples()) {
             this.applesCust += applesCust;
         } else {
-            System.out.println("Shop: " + shop.apples + "< Customer order: " + temp);
+            System.out.println("Shop: " + shop.getApples() + "< Customer order: " + temp);
         }
     }
 
-    void confirmOrder() {
+    public void confirmOrder() {
         shop.withdrawProducts(applesCust, peachesCust, bananasCust);
         applesCust = 0;
         peachesCust = 0;
