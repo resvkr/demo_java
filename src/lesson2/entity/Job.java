@@ -1,10 +1,10 @@
-package lesson2;
+package lesson2.entity;
 
 public class Job {
     String jobTitle;
     int starterAge;
 
-    Job(String jobTitle, int starterAge) {
+    public Job(String jobTitle, int starterAge) {
         this.jobTitle = jobTitle;
         this.starterAge = starterAge;
     }
@@ -13,7 +13,7 @@ public class Job {
         return jobTitle;
     }
 
-    boolean isParticipantIsReadyForWork(int age) {
+    public boolean isParticipantIsReadyForWork(int age) {
         return starterAge <= age;
     }
 
