@@ -1,4 +1,4 @@
-package lesson2;
+package lesson2.entity;
 
 public class Person {
     String name;
@@ -6,7 +6,7 @@ public class Person {
     int age;
     Job job;
 
-    Person(String name, String surname, int age, Job job) {
+    public Person(String name, String surname, int age, Job job) {
         this.name = name;
         this.surname = surname;
         this.age = age;
