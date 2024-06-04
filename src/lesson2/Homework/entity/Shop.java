@@ -1,4 +1,4 @@
-package lesson2.Homework;
+package lesson2.Homework.entity;
 
 public class Shop {
     int apples;
@@ -17,7 +17,7 @@ public class Shop {
         return bananas;
     }
 
-    Shop(int apples, int peaches, int bananas) {
+    public Shop(int apples, int peaches, int bananas) {
         this.apples = apples;
         this.bananas = bananas;
         this.peaches = peaches;
