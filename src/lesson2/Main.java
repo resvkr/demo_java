@@ -1,5 +1,8 @@
 package lesson2;
 
+import lesson2.entity.Job;
+import lesson2.entity.Person;
+
 public class Main {
     public static void main(String[] args) {
         Job job = new Job("cook", 18);

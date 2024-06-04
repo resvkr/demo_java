@@ -1,5 +1,8 @@
 package lesson2.Homework;
 
+import lesson2.Homework.entity.Shop;
+import lesson2.Homework.service.Customer;
+
 public class Main {
     public static void main(String[] args) {
         Shop metro = new Shop(10, 5, 2);
@@ -15,7 +18,5 @@ public class Main {
         customer1.confirmOrder();
         System.out.println(customer1.showChosenProducts());
         System.out.println(metro.showAllProducts());
-
-
     }
 }
